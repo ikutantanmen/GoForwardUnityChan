@@ -13,7 +13,7 @@ public class CubeController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,6 +26,16 @@ public class CubeController : MonoBehaviour
         if (transform.position.x < this.deadLine)
         {
             Destroy(gameObject);
-        }    
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // もしもtagがbulletであるオブジェクトと接触したら
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 }
+

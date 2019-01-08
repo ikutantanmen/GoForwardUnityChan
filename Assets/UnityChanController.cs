@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class UnityChanController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class UnityChanController : MonoBehaviour
     // ゲームオーバになる位置
     private float deadLine = -9;
 
+    [SerializeField]
+    private GameObject bullet;
+
     // Use this for initialization
     void Start()
     {
@@ -33,6 +37,9 @@ public class UnityChanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* 弾オブジェクトを生成して飛ばす関数を呼び出す
+        ShotAction();*/
+
         // 走るアニメーションを再生するために、Animatorのパラメータを調節する
         this.animator.SetFloat("Horizontal", 1);
 
@@ -68,5 +75,16 @@ public class UnityChanController : MonoBehaviour
             // ユニティちゃんを破棄する
             Destroy(gameObject);
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Instantiate(bullet, transform.position, transform.rotation);
+        }
     }
+
+    /* 弾オブジェクトを生成して飛ばす関数
+    void ShotAction()
+    {
+        
+    }*/
 }
