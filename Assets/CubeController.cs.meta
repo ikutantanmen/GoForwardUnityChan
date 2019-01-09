@@ -4,8 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - AS: {instanceID: 0}
-  - block: {fileID: 8300000, guid: e710a1dee5fb8614188afb0f883ec177, type: 3}
+  - m_explosionPrefab: {instanceID: 0}
+  - explosionSE: {fileID: 8300000, guid: 3eb12c7799abe344db209f58b86c17cd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
